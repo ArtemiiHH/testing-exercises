@@ -34,7 +34,8 @@ export function caesarCipher(string, position) {
     let character = string[i];
 
     if (alphabet.includes(character.toLowerCase())) {
-    } else if (alphabet.includes(character.toUpperCase())) {
+      let char = alphabet.indexOf(character);
+      result += character;
     }
   }
 
