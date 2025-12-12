@@ -1,4 +1,4 @@
-export function caesarCipher(str, num) {
+export function caesarCipher(string, position) {
   const alphabet = [
     "a",
     "b",
@@ -27,4 +27,16 @@ export function caesarCipher(str, num) {
     "y",
     "z",
   ];
+
+  let result = "";
+
+  for (let i = 0; i < string.length; i++) {
+    let character = string[i];
+
+    if (alphabet.includes(character.toLowerCase())) {
+    } else if (alphabet.includes(character.toUpperCase())) {
+    }
+  }
+
+  return result;
 }
