@@ -34,12 +34,23 @@ export function caesarCipher(string, position) {
     let character = string[i];
 
     if (alphabet.includes(character.toLowerCase())) {
-      // Index lookup
+      // Check if it's uppercase
+      const isUpper = character === character.toUpperCase();
+
+      // Find original index
       const index = alphabet.indexOf(character.toLowerCase());
+
       // Wrap around logic
       const newPosition = (index + position) % 26;
+
       // Convert index back to letter
-      const findLetter = alphabet[newPosition];
+      let findLetter = alphabet[newPosition];
+
+      // Restore uppercase if needed
+      if (isUpper) {
+        findLetter = findLetter.toUpperCase();
+      }
+
       // Append shifted letter
       result += findLetter;
     } else {
